@@ -1,0 +1,14 @@
+{
+  "name": "pc_display_mirror",
+  "version": "1.0.0",
+  "description": "pc diplay mirror",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron-packager": "^10.1.1"
+  }
+}
