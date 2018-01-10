@@ -6,8 +6,7 @@
   "scripts": {
     "start": "electron ."
   },
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "megaya",
   "devDependencies": {
     "electron-packager": "^10.1.1"
   }
