@@ -9,15 +9,31 @@
     <video id="video" ></video>
     <div class="range" id="brightness">
       <img src="img/brightness.png">
-      <input type="range" oninput="index_js.changeBrightness(this.valueAsNumber);" value="1" step="0.1" min="1" max="10">
+      <input type="range" id="rngBrightness" value="1" step="0.1" min="1" max="10">
     </div>
     <div class="range" id="scale">
       <img src="img/scale.png">
-      <input type="range" oninput="index_js.changeScale(this.valueAsNumber);" value="1" step="0.1" min="1" max="10">
+      <input type="range" id="rngScale" value="1" step="0.1" min="1" max="10">
     </div>
 
-    <script>
-      var index_js = require('./index.js');
-    </script>
-  </body>
+<script type="module">
+try {
+  const stream = await navigator.mediaDevices.getUserMedia({video: true, audio: false});
+  video.srcObject = stream;
+  video.play();
+
+  rngBrightness.oninput = (e) => {
+    const val = e.target.value;
+    video.style.webkitFilter = "brightness(" + val + ")";
+  };
+
+  rngScale.oninput = (e) => {
+    const val = e.target.value;
+    video.style.transform = "scale(" + (-1 * val) + ',' + val + ")";
+  };
+} catch (e) {
+  alert("ERROR: カメラを起動できませんでした。カメラの使用を許可してください。");
+}
+</script>
+</body>
 </html>

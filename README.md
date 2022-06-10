@@ -13,14 +13,6 @@ $ npm install && npm start
 ```
 ## パッケージ化
 
-#### Windows
-
 ```
-electron-packager app/ app_name --platform=win32 --arch=all --version=1.7.10
-```
-
-#### mac
-
-```
-electron-packager app/ app_name --platform=drawin --arch=all --version=1.7.10
+$ npm run build
 ```
