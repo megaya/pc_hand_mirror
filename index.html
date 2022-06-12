@@ -18,13 +18,13 @@
 
 <script type="module">
 try {
-  const stream = await navigator.mediaDevices.getUserMedia({video: true, audio: false});
+  const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
   video.srcObject = stream;
   video.play();
 
   rngBrightness.oninput = (e) => {
     const val = e.target.value;
-    video.style.webkitFilter = "brightness(" + val + ")";
+    video.style.filter = "brightness(" + val + ")";
   };
 
   rngScale.oninput = (e) => {
