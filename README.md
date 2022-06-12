@@ -6,7 +6,7 @@ Electronで作った鏡アプリです
 ## 準備
 
 - [Node.js](https://nodejs.org/ja/)最新版をインストール
-- 本リポジトリをclone
+- 本リポジトリをダウンロードまたはクローン
 
 ```
 $ npm install
